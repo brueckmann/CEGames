@@ -1,5 +1,8 @@
-# CEGames
+# Climate and Energy related Serious Games
 
-A [workflowr][] project.
+An overview: https://brueckmann.github.io/CEGames/
 
-[workflowr]: https://github.com/workflowr/workflowr
+Feel free to contribute. 
+
+
+
