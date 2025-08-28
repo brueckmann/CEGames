@@ -1,8 +1,7 @@
-# Climate and Energy related Serious Games
+# Climate and Energy-related Serious Games
 
-An overview: https://brueckmann.github.io/CEGames/
+Current overview: <https://brueckmann.github.io/CEGames/>
 
-Feel free to contribute. 
+Feel free to contribute!
 
-
-
+Raw data is in `/data` ([the subfolder "data"](https://github.com/brueckmann/CEGames/tree/main/data)).
