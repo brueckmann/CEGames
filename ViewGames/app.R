@@ -13,12 +13,18 @@ games <- readr::read_delim("https://raw.githubusercontent.com/brueckmann/CEGames
                            delim = ";", escape_double = FALSE, na = "NA",
                            trim_ws = TRUE, show_col_types = FALSE)
 
-games <- games |>  filter(!(Link == ""))
-
-games <- games |> relocate("Name", "Known serious game")
-
-games <- games |> rename("Serious Game" =  "Known serious game")
-
+library(readr)
+GamesOverview <- read_delim("data/GamesOverview.csv",
+                            delim = ";", escape_double = FALSE, na = "NA",
+                            trim_ws = TRUE)
+# View(GamesOverview)
+#
+# games <- games |>  filter(!(Link == ""))
+#
+# games <- games |> relocate("Name", "Known serious game")
+#
+# games <- games |> rename("Serious Game" =  "Known serious game")
+#
 
 library(DT)
 library(shiny)
@@ -27,12 +33,12 @@ server <- function(input, output) {
 
   # Filter data based on selections
   output$table <- DT::renderDataTable(DT::datatable({
-    data <- games
+    data <- GamesOverview
     if (input$onlineonly != "All") {
-      data <- data[data$`Online Game` == input$onlineonly, ]
+      data <- data[data$`OnlineGame` == input$onlineonly, ]
     }
     if (input$onlyserious != "All") {
-      data <- data[data$`Known Known serious game` == input$onlyserious, ]
+      data <- data[data$`KnownSeriousGame` == input$onlyserious, ]
     }
     data
   }))
@@ -47,15 +53,15 @@ ui <- fluidPage(
   fluidRow(
     column(4,
            selectInput("onlineonly",
-                       "Only Online Games?",
+                       "Only OnlineGames?",
                        c("All",
-                         unique(as.character(games$`Online Game`))))
+                         unique(as.character(games$`OnlineGame`))))
     ),
     column(4,
            selectInput("onlyserious",
                        "Only Known serious games?",
                        c("All",
-                         unique(as.character(games$`Known Known serious game`))))
+                         unique(as.character(games$`KnownSeriousGame`))))
     )
   ),
   # Create a new row for the table.
