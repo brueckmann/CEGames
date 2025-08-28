@@ -8,12 +8,12 @@
 #
 
 
-
+library(tidyverse)
 games <- readr::read_delim("https://raw.githubusercontent.com/brueckmann/CEGames/refs/heads/main/data/ListGames_2025_08_27.csv",
                            delim = ";", escape_double = FALSE, na = "NA",
-                           trim_ws = TRUE)
+                           trim_ws = TRUE, show_col_types = FALSE)
 
-games <- games |>  filter(!((Link == "")))
+games <- games |>  filter(!(Link == ""))
 
 games <- games |> relocate("Name", "Known serious game")
 
