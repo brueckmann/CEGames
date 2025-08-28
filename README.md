@@ -4,13 +4,18 @@ Current overview: <https://brueckmann.github.io/CEGames/>
 
 **Feel free to contribute!** Raw data can be found in `/data` ([the subfolder "data"](https://github.com/brueckmann/CEGames/tree/main/data)).
 
+
+
 ## What are Serious Games ?
 
 Serious Games
 
 :   *Games that do not have entertainment, enjoyment or fun as their primary purpose* (Michael and Chen, 2005).
 
-An example of a *Serious Game* is [Ensured Energy]{.smallcaps}, which can be played here <sweet-sure.ch/game>.
+An example of a *Serious Game* is Ensured Energy, which can be played on <https://sweet-sure.ch/game/>.
+
+
+
 
 ##### Reference:
 
