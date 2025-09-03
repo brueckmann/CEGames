@@ -11,7 +11,7 @@ gamedata <-readr::read_csv2(url(urlfile), na = "NA",
 ui <- page_sidebar(
 
   # App title ----
-  title = "Last updated on 03 September 2025 by brueckmann.github.io.",
+  title = "Last updated on 03 September 2025 by brueckmann.github.io. Reach out and feel free to contribute!",
 
   # Sidebar panel for inputs ----
   sidebar = sidebar(
