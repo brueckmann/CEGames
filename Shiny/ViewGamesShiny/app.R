@@ -50,7 +50,7 @@ ui <- page_sidebar(
     numericInput(
       inputId = "obs",
       label = "Number of rows to display:",
-      value = 19
+      value = 20
     )
   ),
 
