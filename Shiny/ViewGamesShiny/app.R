@@ -11,7 +11,7 @@ gamedata <-readr::read_csv2(url(urlfile), na = "NA",
 ui <- page_sidebar(
 
   # App title ----
-  title = "Last updated on 28 August 2025 by brueckmann.github.io.",
+  title = "Last updated on 03 September 2025 by brueckmann.github.io.",
 
   # Sidebar panel for inputs ----
   sidebar = sidebar(
@@ -50,13 +50,13 @@ ui <- page_sidebar(
     numericInput(
       inputId = "obs",
       label = "Number of rows to display:",
-      value = 18
+      value = 19
     )
   ),
 
 
   # # Output: Formatted text for caption ----
-  h3("List of 18 Climate and Energy (Serious) Games"),
+  h3("List of 19 Climate and Energy (Serious) Games"),
 
 
   # Output: HTML table with requested number of observations ----
