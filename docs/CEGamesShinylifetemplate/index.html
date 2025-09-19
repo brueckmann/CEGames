@@ -7,24 +7,24 @@
   
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script
-      src="./shinylive/load-shinylive-sw.js"
+      src="./{{REL_PATH}}shinylive/load-shinylive-sw.js"
       type="module"
     ></script>
     <script type="module">
-      import { runExportedApp } from "./shinylive/shinylive.js";
+      import { runExportedApp } from "./{{REL_PATH}}shinylive/shinylive.js";
       runExportedApp({
         id: "root",
-        appEngine: "r",
-        relPath: "",
+        appEngine: "{{APP_ENGINE}}",
+        relPath: "{{REL_PATH}}",
       });
     </script>
-    <link rel="stylesheet" href="./shinylive/style-resets.css" />
-    <link rel="stylesheet" href="./shinylive/shinylive.css" />
-    
+    <link rel="stylesheet" href="./{{REL_PATH}}shinylive/style-resets.css" />
+    <link rel="stylesheet" href="./{{REL_PATH}}shinylive/shinylive.css" />
+    {{{ include_in_head }}}
   </head>
   <body>
-    
+    {{{ include_before_body }}}
     <div style="height: 100vh; width: 100vw" id="root"></div>
-    
+    {{{ include_after_body }}}
   </body>
 </html>
